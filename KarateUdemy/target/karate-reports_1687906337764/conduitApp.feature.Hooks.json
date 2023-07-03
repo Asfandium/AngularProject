@@ -1,0 +1,237 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": { "duration": 2895700, "status": "passed" },
+            "comments": [
+              "# * def result = callonce read('classpath:Helpers/Dummy.feature')",
+              "# * def username = result.username",
+              "#after hook"
+            ],
+            "line": 8,
+            "name": "configure afterScenario = function(){ karate.call('classpath:Helpers/Dummy.feature')}",
+            "match": { "location": "karate", "arguments": [] },
+            "keyword": "*",
+            "doc_string": {
+              "content_type": "",
+              "value": "03:29:01.856 karate.env system property was: null \n",
+              "line": 8
+            }
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-06-27T22:28:59.791Z",
+        "line": 10,
+        "name": "First Scenario",
+        "description": "",
+        "id": "first-scenario",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "name": "print 'This is first message'",
+            "result": { "duration": 1332500, "status": "passed" },
+            "match": { "location": "karate", "arguments": [] },
+            "keyword": "*",
+            "line": 12,
+            "doc_string": {
+              "content_type": "",
+              "value": "03:29:01.867 [print] This is first message \n",
+              "line": 12
+            }
+          },
+          {
+            "name": "Helpers/Dummy.feature",
+            "result": { "duration": 0, "status": "passed" },
+            "match": { "location": "karate", "arguments": [] },
+            "keyword": "",
+            "line": 12
+          },
+          {
+            "name": "def dataGenerator = Java.type('Helpers.DataGenerator')",
+            "result": { "duration": 1879100, "status": "passed" },
+            "match": { "location": "karate", "arguments": [] },
+            "keyword": "> *",
+            "line": 6
+          },
+          {
+            "name": "def username = dataGenerator.getRandomUsername()",
+            "result": { "duration": 44128200, "status": "passed" },
+            "match": { "location": "karate", "arguments": [] },
+            "keyword": "> *",
+            "line": 7
+          },
+          {
+            "name": "print username",
+            "result": { "duration": 1742900, "status": "passed" },
+            "match": { "location": "karate", "arguments": [] },
+            "keyword": "> *",
+            "line": 8,
+            "doc_string": {
+              "content_type": "",
+              "value": "03:29:02.123 [print] monty.flatley \n",
+              "line": 8
+            }
+          }
+        ],
+        "tags": []
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": { "duration": 1898000, "status": "passed" },
+            "comments": [
+              "# * def result = callonce read('classpath:Helpers/Dummy.feature')",
+              "# * def username = result.username",
+              "#after hook"
+            ],
+            "line": 8,
+            "name": "configure afterScenario = function(){ karate.call('classpath:Helpers/Dummy.feature')}",
+            "match": { "location": "karate", "arguments": [] },
+            "keyword": "*",
+            "doc_string": {
+              "content_type": "",
+              "value": "03:29:01.848 << lock released, cached callSingle: classpath:Helpers/CreateToken.feature\n",
+              "line": 8
+            }
+          },
+          {
+            "name": "Helpers/CreateToken.feature",
+            "result": { "duration": 0, "status": "passed" },
+            "match": { "location": "karate", "arguments": [] },
+            "keyword": "",
+            "line": 8
+          },
+          {
+            "name": "url apiUrl",
+            "result": { "duration": 1523600, "status": "passed" },
+            "match": { "location": "karate", "arguments": [] },
+            "keyword": "> Given",
+            "line": 4,
+            "doc_string": {
+              "content_type": "",
+              "value": "03:28:59.961 karate.env system property was: null \n03:28:59.969 >> lock acquired, begin callSingle: classpath:Helpers/CreateToken.feature\n",
+              "line": 4
+            }
+          },
+          {
+            "name": "path 'users/login'",
+            "result": { "duration": 606700, "status": "passed" },
+            "match": { "location": "karate", "arguments": [] },
+            "keyword": "> Given",
+            "line": 8
+          },
+          {
+            "name": "request {\"user\":  { \"email\": \"#(UserEmail)\", \"password\": \"#(UserPassword)\"} }",
+            "result": { "duration": 18180400, "status": "passed" },
+            "match": { "location": "karate", "arguments": [] },
+            "keyword": "> And",
+            "line": 9
+          },
+          {
+            "name": "method POST",
+            "result": { "duration": 1788803300, "status": "passed" },
+            "match": { "location": "karate", "arguments": [] },
+            "keyword": "> When",
+            "line": 10,
+            "doc_string": {
+              "content_type": "",
+              "value": "03:29:00.464 request:\n1 > POST https://api.realworld.io/api/users/login\n1 > Content-Type: application/json; charset=UTF-8\n1 > Content-Length: 74\n1 > Host: api.realworld.io\n1 > Connection: Keep-Alive\n1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.18)\n1 > Accept-Encoding: gzip,deflate\n{\"user\":{\"email\":\"karate123456789@test.com\",\"password\":\"karate123456789\"}}\n\n03:29:01.838 response time in milliseconds: 1371\n1 < 200\n1 < Date: Tue, 27 Jun 2023 22:29:02 GMT\n1 < Content-Type: application/json; charset=utf-8\n1 < Transfer-Encoding: chunked\n1 < Connection: keep-alive\n1 < X-Powered-By: Express\n1 < Access-Control-Allow-Origin: *\n1 < Etag: W/\"171-QZzYOJGJTzAxzFiEKAR/huU6smY\"\n1 < Via: 1.1 vegur\n1 < CF-Cache-Status: DYNAMIC\n1 < Report-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=qZ7U3XGIzDADUzM%2BG1lcWGss5G1igamQ6fKbtCIwxKUdkCSuZAGpn5oWr%2BdsY%2FOzlkPhRtL%2FMSn6EP71JBkrRBzZWKpKqeRk147R%2FNJfJV%2B9KxMGeUtbmKGf8sYe0m2%2FJkba\"}],\"group\":\"cf-nel\",\"max_age\":604800}\n1 < NEL: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\n1 < Server: cloudflare\n1 < CF-RAY: 7de12060bd7e9ae9-MIA\n1 < alt-svc: h3=\":443\"; ma=86400\n{\"user\":{\"email\":\"karate123456789@test.com\",\"username\":\"karate123456789\",\"bio\":null,\"image\":\"https://api.realworld.io/images/smiley-cyrus.jpeg\",\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImthcmF0ZTEyMzQ1Njc4OUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoia2FyYXRlMTIzNDU2Nzg5IiwiaWF0IjoxNjg3OTA0OTQyLCJleHAiOjE2OTMwODg5NDJ9.J064e1d0AfLuZEPu8af1YEhmh07inpptlp5qf3_yR4g\"}}\n\n",
+              "line": 10
+            }
+          },
+          {
+            "name": "status 200",
+            "result": { "duration": 32000, "status": "passed" },
+            "match": { "location": "karate", "arguments": [] },
+            "keyword": "> Then",
+            "line": 11
+          },
+          {
+            "name": "def authToken = response.user.token",
+            "result": { "duration": 5150500, "status": "passed" },
+            "match": { "location": "karate", "arguments": [] },
+            "keyword": "> *",
+            "line": 12
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-06-27T22:28:59.791Z",
+        "line": 14,
+        "name": "Second Scenario",
+        "description": "",
+        "id": "second-scenario",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "name": "print 'This is Second message'",
+            "result": { "duration": 1808700, "status": "passed" },
+            "match": { "location": "karate", "arguments": [] },
+            "keyword": "*",
+            "line": 16,
+            "doc_string": {
+              "content_type": "",
+              "value": "03:29:01.860 [print] This is Second message \n",
+              "line": 16
+            }
+          },
+          {
+            "name": "Helpers/Dummy.feature",
+            "result": { "duration": 0, "status": "passed" },
+            "match": { "location": "karate", "arguments": [] },
+            "keyword": "",
+            "line": 16
+          },
+          {
+            "name": "def dataGenerator = Java.type('Helpers.DataGenerator')",
+            "result": { "duration": 6221300, "status": "passed" },
+            "match": { "location": "karate", "arguments": [] },
+            "keyword": "> *",
+            "line": 6
+          },
+          {
+            "name": "def username = dataGenerator.getRandomUsername()",
+            "result": { "duration": 177607400, "status": "passed" },
+            "match": { "location": "karate", "arguments": [] },
+            "keyword": "> *",
+            "line": 7
+          },
+          {
+            "name": "print username",
+            "result": { "duration": 1883100, "status": "passed" },
+            "match": { "location": "karate", "arguments": [] },
+            "keyword": "> *",
+            "line": 8,
+            "doc_string": {
+              "content_type": "",
+              "value": "03:29:02.059 [print] adele.bruen \n",
+              "line": 8
+            }
+          }
+        ],
+        "tags": []
+      }
+    ],
+    "name": "conduitApp/feature/Hooks.feature",
+    "description": "Hooks",
+    "id": "hooks",
+    "keyword": "Feature",
+    "uri": "conduitApp/feature/Hooks.feature"
+  }
+]
